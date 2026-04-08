@@ -1,5 +1,4 @@
-// app\layout.tsx
-
+import { JsonLd } from "@/components/SEO/JsonLd";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
@@ -8,6 +7,7 @@ import { Header } from "@/components/layouts/Header";
 import { Footer } from "@/components/layouts/Footer";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { FloatingContactButtons } from "@/components/layouts/FloatingContactButtons";
+import { BlogListWrapper } from "@/components/blog/BlogListWrapper";
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -20,10 +20,39 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "H2N - Taxi Services Vietnam",
+  metadataBase: new URL("https://h2ntaxi.com"),
+
+  // SEO TITLE
+  title: {
+    default:
+      "Taxi Hà Nội giá rẻ | H2N Taxi thuê xe hợp đồng, đặt xe sân bay Nội Bài, đường dài",
+    template: "%s | H2N Taxi",
+  },
+
+  // SEO DESCRIPTION
   description:
-    "Professional taxi booking services in Vietnam - Airport transfers, fixed car rentals, and long-distance transportation",
-  generator: "nextjs",
+    "H2N Taxi cung cấp dịch vụ taxi Hà Nội giá rẻ, thuê xe hợp đồng, taxi sân bay Nội Bài, taxi đường dài, xe về quê, xe du lịch.",
+
+  // KEYWORDS
+  keywords: [
+    "taxi Hà Nội",
+    "taxi giá rẻ",
+    "thuê xe",
+    "thuê xe hợp đồng",
+    "thuê xe cố định",
+    "taxi sân bay",
+    "đặt xe sân bay",
+    "Nội Bài",
+    "xe về quê",
+    "taxi đường dài",
+  ],
+
+  // ROBOTS
+  robots: {
+    index: true,
+    follow: true,
+  },
+
   icons: {
     icon: [
       {
@@ -41,21 +70,36 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-icon.png",
   },
+
+  // OPEN GRAPH (SEO nâng cao - share đẹp)
+  openGraph: {
+    title: "Taxi Hà Nội giá rẻ - H2N Taxi",
+    description:
+      "Taxi Hà Nội, thuê xe hợp đồng giá rẻ, taxi sân bay Nội Bài, taxi đường dài.",
+    url: "https://h2ntaxi.com",
+    siteName: "H2N Taxi",
+    locale: "vi_VN",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="vi">
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
         <LanguageProvider>
           <Header />
+          <JsonLd />
           {children}
+
+          <BlogListWrapper />
+
           {process.env.NODE_ENV === "production" && <Analytics />}
           <Footer />
           <FloatingContactButtons />

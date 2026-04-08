@@ -1,4 +1,4 @@
-// lib/data/contract-rental.ts
+// data\contract-rental.ts
 
 export interface PriceRow {
   stt: number;

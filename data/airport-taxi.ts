@@ -1,4 +1,4 @@
-// lib\data\airport-taxi.ts
+// data\airport-taxi.ts
 
 export interface PriceConfig {
   seats5: number;

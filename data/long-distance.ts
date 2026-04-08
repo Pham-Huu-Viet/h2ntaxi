@@ -1,3 +1,5 @@
+// data\long-distance.ts
+
 export interface LongDistanceRoute {
   from: { vi: string; en: string };
   to: { vi: string; en: string };
