@@ -15,18 +15,6 @@ export const longDistanceData: LongDistanceData = {
     title: { vi: "Xe 5 chỗ", en: "5-Seater Car" },
     routes: [
       {
-        from: { vi: "Hà Nội", en: "Hanoi" },
-        to: { vi: "Sân bay", en: "Airport" },
-        price: 250000,
-        limit: "<31km",
-      },
-      {
-        from: { vi: "Sân bay", en: "Airport" },
-        to: { vi: "Hà Nội", en: "Hanoi" },
-        price: 300000,
-        limit: "<31km",
-      },
-      {
         from: { vi: "Nội thành", en: "City Center" },
         to: { vi: "Nội thành", en: "City Center" },
         price: 150000,
@@ -47,13 +35,13 @@ export const longDistanceData: LongDistanceData = {
       {
         from: { vi: "Liên tỉnh", en: "Interprovincial" },
         to: { vi: "2 chiều", en: "Round trip" },
-        price: 8000,
+        price: 7000,
         limit: "100km<200km",
       },
       {
         from: { vi: "Liên tỉnh", en: "Interprovincial" },
         to: { vi: "2 chiều", en: "Round trip" },
-        price: 7000,
+        price: 6000,
         limit: ">200km",
       },
     ],
@@ -61,18 +49,6 @@ export const longDistanceData: LongDistanceData = {
   car7: {
     title: { vi: "Xe 7 chỗ", en: "7-Seater Car" },
     routes: [
-      {
-        from: { vi: "Hà Nội", en: "Hanoi" },
-        to: { vi: "Sân bay", en: "Airport" },
-        price: 300000,
-        limit: "<31km",
-      },
-      {
-        from: { vi: "Sân bay", en: "Airport" },
-        to: { vi: "Hà Nội", en: "Hanoi" },
-        price: 350000,
-        limit: "<31km",
-      },
       {
         from: { vi: "Nội thành", en: "City Center" },
         to: { vi: "Nội thành", en: "City Center" },
@@ -90,6 +66,18 @@ export const longDistanceData: LongDistanceData = {
         to: { vi: "2 chiều", en: "Round trip" },
         price: 10000,
         limit: "<100km",
+      },
+      {
+        from: { vi: "Liên tỉnh", en: "Interprovincial" },
+        to: { vi: "2 chiều", en: "Round trip" },
+        price: 8000,
+        limit: "100km<200km",
+      },
+      {
+        from: { vi: "Liên tỉnh", en: "Interprovincial" },
+        to: { vi: "2 chiều", en: "Round trip" },
+        price: 7000,
+        limit: ">200km",
       },
     ],
   },

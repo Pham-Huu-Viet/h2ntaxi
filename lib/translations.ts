@@ -3,14 +3,13 @@
 export const translations = {
   en: {
     // Navigation
-    home: "Airport Transfer",
-    contractRental: "Contract Rental",
+    home: "Fixed car rental",
+    airportTransfer: "Airport Transfer",
     longDistance: "Long Distance",
     settings: "Settings",
     language: "Language",
 
-    // Home
-    airportTransfer: "Airport Transfer",
+    // fixed car rental
     fromAirport: "From Airport",
     toDestination: "To Destination",
     getPrice: "Get Price",
@@ -24,7 +23,7 @@ export const translations = {
     price: "Price",
     perKm: "per km",
 
-    // Contract Rental
+    // fixed car rental
     rentalDays: "Rental Days",
     rentalType: "Rental Type",
     selectType: "Select Type",
@@ -75,14 +74,13 @@ export const translations = {
   },
   vi: {
     // Navigation
-    home: "Đặt xe sân bay",
-    contractRental: "Cho Thuê Xe",
-    longDistance: "Chuyến Đường Dài",
+    home: "Thuê xe cố định",
+    airportTransfer: "Đặt xe Sân Bay",
+    longDistance: "Đặt xe đường dài",
     settings: "Cài Đặt",
     language: "Ngôn Ngữ",
 
-    // Home
-    airportTransfer: "Đón/Tải Sân Bay",
+    // fixed car rental
     fromAirport: "Từ Sân Bay",
     toDestination: "Đến Đích",
     getPrice: "Xem Giá",
@@ -96,7 +94,7 @@ export const translations = {
     price: "Giá",
     perKm: "mỗi km",
 
-    // Contract Rental
+    // fixed car rental
     rentalDays: "Số Ngày Thuê",
     rentalType: "Loại Thuê",
     selectType: "Chọn Loại",

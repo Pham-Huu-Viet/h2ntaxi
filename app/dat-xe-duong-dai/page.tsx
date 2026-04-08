@@ -111,7 +111,7 @@ export default function LongDistancePage() {
   return (
     <div className="min-h-screen bg-white">
       <section
-        className="relative flex h-100 items-center justify-center bg-cover bg-center"
+        className="relative flex h-80 items-center justify-center bg-cover bg-center md:h-100"
         style={{ backgroundImage: "url(/hero-bg-contract.png)" }}
       >
         <div className="absolute inset-0 bg-black/55" />
@@ -121,10 +121,10 @@ export default function LongDistancePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="mb-4 text-5xl font-bold text-white md:text-6xl">
+            <h1 className="mb-4 font-bold text-white md:text-6xl">
               {language === "en" ? "Long Distance Travel" : "Đặt xe đường dài"}
             </h1>
-            <p className="text-xl text-white/90">
+            <p className="text-white/90">
               {language === "en"
                 ? "Comfortable transportation"
                 : "Vận chuyển đường dài chuyên nghiệp"}

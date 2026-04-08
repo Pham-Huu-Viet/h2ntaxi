@@ -45,7 +45,7 @@ export function Footer() {
                   href="/contract"
                   className="hover:text-primary text-gray-400 transition-colors"
                 >
-                  {t("contractRental", language)}
+                  {t("airportTransfer", language)}
                 </Link>
               </li>
               <li>
@@ -69,10 +69,10 @@ export function Footer() {
                 <span>📞</span> {hotline}
               </li>
               <li className="flex items-center gap-2">
-                <span>📧</span> info@h2ntaxi.vn
+                <span>📧</span> congtytnhhthuongmaidichvuh2n@gmail.com
               </li>
               <li className="flex items-center gap-2">
-                <span>📍</span> {t("hanoi", language)}, {t("hcmc", language)}
+                <span>📍</span> {t("hanoi", language)}
               </li>
               <li className="text-primary flex items-center gap-2 font-medium">
                 <span>💬</span> {t("available247", language)}

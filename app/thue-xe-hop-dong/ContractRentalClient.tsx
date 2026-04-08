@@ -1,4 +1,4 @@
-// app\contract\page.tsx
+// app\thue-xe-hop-dong\ContractRentalClient.tsx
 
 "use client";
 
@@ -6,11 +6,10 @@ import { contractRentalData } from "@/data/contract-rental";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 
-// Đồng bộ hằng số padding từ HomePage
 const pxTable = "px-1 md:px-6";
 const pxSTT = "px-1 md:px-4";
 
-export default function ContractRentalPage() {
+export default function ContractRentalClient() {
   const { language } = useLanguage();
   const lang = (language as "vi" | "en") || "vi";
 
@@ -20,7 +19,6 @@ export default function ContractRentalPage() {
 
     return (
       <div className="mb-20 flex flex-col gap-6">
-        {/* Title style đồng bộ với section sân bay */}
         <div className="flex flex-col gap-4">
           <h3 className="flex items-center gap-2 text-xl font-bold text-gray-800">
             <div className="bg-primary h-8 w-2 rounded-full" />
@@ -28,12 +26,10 @@ export default function ContractRentalPage() {
           </h3>
         </div>
 
-        {/* Table Container: Bo góc md:rounded-3xl và đổ bóng mạnh */}
         <div className="overflow-hidden rounded-xl border border-gray-100 bg-white shadow-xl md:rounded-3xl">
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
-                {/* Header màu tối giống HomePage */}
                 <tr className="bg-gray-800 text-white">
                   <th className={`py-5 text-center ${pxSTT}`}>
                     {headers.stt[lang]}
@@ -54,7 +50,6 @@ export default function ContractRentalPage() {
               <tbody className="divide-y divide-gray-100">
                 {data.rows.map((row, idx) => {
                   const isPriceRow = row.stt === 3;
-
                   return (
                     <tr
                       key={idx}
@@ -70,8 +65,6 @@ export default function ContractRentalPage() {
                       >
                         {row.content[lang]}
                       </td>
-
-                      {/* Các cột giá: Bỏ background-color cứng, dùng text màu đỏ để nổi bật */}
                       <td
                         className={`py-3 text-center ${pxTable} ${isPriceRow ? "text-primary font-semibold" : "text-gray-600"}`}
                       >
@@ -101,7 +94,7 @@ export default function ContractRentalPage() {
   return (
     <div className="min-h-screen bg-white">
       <section
-        className="relative flex h-100 items-center justify-center bg-cover bg-center"
+        className="relative flex h-80 items-center justify-center bg-cover bg-center md:h-100"
         style={{ backgroundImage: "url(/hero-bg-contract.png)" }}
       >
         <div className="absolute inset-0 bg-black/55" />
@@ -111,10 +104,10 @@ export default function ContractRentalPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="mb-4 text-5xl font-bold text-white md:text-6xl">
+            <h1 className="mb-4 font-bold text-white md:text-6xl">
               {language === "en" ? "Contract Car Rental" : "Thuê xe hợp đồng"}
             </h1>
-            <p className="text-xl text-white/90">
+            <p className="text-white/90">
               {language === "en"
                 ? "Flexible rental packages for your business and personal needs"
                 : "Các gói thuê xe linh hoạt cho nhu cầu kinh doanh và cá nhân"}
@@ -123,13 +116,11 @@ export default function ContractRentalPage() {
         </div>
       </section>
 
-      {/* Tables Section: Nền xám nhạt để nổi bật Card trắng */}
       <section className="bg-gray-50 px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <PriceTable carKey="car5" />
           <PriceTable carKey="car7" />
 
-          {/* Điều khoản & Tại sao chọn chúng tôi: Tận dụng CardUI style */}
           <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2">
             {[
               {

@@ -16,9 +16,9 @@ export function Header() {
   const pathname = usePathname();
 
   const navLinks = [
-    { label: t("contractRental", language), href: "/contract" },
-    { label: t("home", language), href: "/" },
-    { label: t("longDistance", language), href: "/long-distance" },
+    { label: t("home", language), href: "/thue-xe-hop-dong" },
+    { label: t("airportTransfer", language), href: "/dat-xe-san-bay" },
+    { label: t("longDistance", language), href: "/dat-xe-duong-dai" },
   ];
 
   // Uniform motion configuration variable

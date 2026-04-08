@@ -41,7 +41,7 @@ export class DataStorage {
     }
   }
 
-  // Contract Rental Data
+  // fixed car rental Data
   static getContractRentals() {
     if (typeof window === "undefined") return contractRentalData;
     try {

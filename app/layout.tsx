@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "H2N - Taxi Services Vietnam",
   description:
-    "Professional taxi booking services in Vietnam - Airport transfers, contract rentals, and long-distance transportation",
+    "Professional taxi booking services in Vietnam - Airport transfers, fixed car rentals, and long-distance transportation",
   generator: "nextjs",
   icons: {
     icon: [
