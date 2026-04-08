@@ -33,9 +33,13 @@ export const airportText = {
     fromAirport: { en: "Pick up from Airport", vi: "Đón từ sân bay" },
     destination: { en: "Destination", vi: "Điểm đến" },
     pickup: { en: "Pickup Location", vi: "Điểm đón" },
+    airport: { en: "Noi Bai Airport", vi: "Sân bay Nội Bài" },
     selectDistrict: { en: "Select district", vi: "Chọn quận" },
     priceFrom: { en: "Starting from", vi: "Từ" },
     bookNow: { en: "Book Now", vi: "Đặt xe ngay" },
+    seats5: { en: "5-seater car", vi: "Xe 5 chỗ" },
+    seats7: { en: "7-seater car", vi: "Xe 7 chỗ" },
+    carType: { en: "Car Type", vi: "Loại xe" },
   },
   features: {
     sectionTitle: { en: "Why Choose H2N Taxi?", vi: "Tại sao chọn H2N Taxi?" },

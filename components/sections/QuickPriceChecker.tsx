@@ -136,7 +136,8 @@ export function QuickPriceChecker() {
           </label>
           <div className="flex w-full items-center gap-3 rounded-xl border-2 border-gray-50 bg-gray-50 px-4 py-3 font-bold text-gray-800">
             <div className="bg-primary h-2 w-2 animate-pulse rounded-full" />{" "}
-            Nội Bài Airport
+            {/* Nội Bài Airport */}
+            {text.card.airport[lang]}
           </div>
         </div>
 
@@ -213,7 +214,7 @@ export function QuickPriceChecker() {
         {/* Dropdown Vehicle Type */}
         <div className="relative" ref={carDropdownRef}>
           <label className="mb-2 block px-1 text-xs font-bold text-gray-400 uppercase">
-            {lang === "vi" ? "Loại xe" : "Car Type"}
+            {text.card.carType[lang]}{" "}
           </label>
           <div
             onClick={() => handleDropdownToggle("car")}
@@ -226,7 +227,9 @@ export function QuickPriceChecker() {
           >
             <div className="flex items-center gap-2 text-gray-800">
               <Car size={18} className="text-primary" />
-              {carType === "seats5" ? "Xe 5 chỗ" : "Xe 7 chỗ"}
+              {carType === "seats5"
+                ? text.card.seats5[lang]
+                : text.card.seats7[lang]}
             </div>
             <ChevronDown
               size={20}
@@ -265,7 +268,7 @@ export function QuickPriceChecker() {
                   }}
                   className="hover:bg-primary/5 flex cursor-pointer items-center justify-between px-5 py-3 font-semibold text-gray-700"
                 >
-                  Xe 5 chỗ{" "}
+                  {text.card.seats5[lang]}
                   {carType === "seats5" && (
                     <Check size={16} className="text-primary" />
                   )}
@@ -277,7 +280,7 @@ export function QuickPriceChecker() {
                   }}
                   className="hover:bg-primary/5 flex cursor-pointer items-center justify-between px-5 py-3 font-semibold text-gray-700"
                 >
-                  Xe 7 chỗ{" "}
+                  {text.card.seats7[lang]}
                   {carType === "seats7" && (
                     <Check size={16} className="text-primary" />
                   )}
