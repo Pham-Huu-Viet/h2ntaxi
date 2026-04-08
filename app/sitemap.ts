@@ -1,36 +1,66 @@
-export default function sitemap() {
+// app/sitemap.ts
+import { MetadataRoute } from "next";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = "https://h2ntaxi.com";
+  const currentDate = new Date();
+
   return [
     {
-      url: "https://h2ntaxi.com",
+      url: baseUrl,
+      lastModified: currentDate,
+      changeFrequency: "daily",
+      priority: 1, // Trang chủ ưu tiên cao nhất
     },
     {
-      url: "https://h2ntaxi.com/thue-xe-hop-dong",
+      url: `${baseUrl}/thue-xe-hop-dong`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     {
-      url: "https://h2ntaxi.com/dat-xe-san-bay",
+      url: `${baseUrl}/dat-xe-san-bay`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     {
-      url: "https://h2ntaxi.com/dat-xe-duong-dai",
+      url: `${baseUrl}/dat-xe-duong-dai`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     {
-      url: "https://h2ntaxi.com/blog",
+      url: `${baseUrl}/blog`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.7,
     },
-
-    // BLOG
+    // BLOG POSTS
     {
-      url: "https://h2ntaxi.com/blog/bang-gia-thue-xe-hop-dong-ha-noi",
-    },
-    {
-      url: "https://h2ntaxi.com/blog/doanh-nghiep-thue-xe-hop-dong-ha-noi",
-    },
-    {
-      url: "https://h2ntaxi.com/blog/thue-xe-hop-dong-ha-noi",
+      url: `${baseUrl}/blog/bang-gia-thue-xe-hop-dong-ha-noi`,
+      lastModified: currentDate,
+      priority: 0.6,
     },
     {
-      url: "https://h2ntaxi.com/blog/di-san-bay-noi-bai-bao-nhieu-tien",
+      url: `${baseUrl}/blog/doanh-nghiep-thue-xe-hop-dong-ha-noi`,
+      lastModified: currentDate,
+      priority: 0.6,
     },
     {
-      url: "https://h2ntaxi.com/blog/taxi-duong-dai-ha-noi",
+      url: `${baseUrl}/blog/thue-xe-hop-dong-ha-noi`,
+      lastModified: currentDate,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/di-san-bay-noi-bai-bao-nhieu-tien`,
+      lastModified: currentDate,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/blog/taxi-duong-dai-ha-noi`,
+      lastModified: currentDate,
+      priority: 0.6,
     },
   ];
 }
