@@ -101,9 +101,9 @@ export default function RootLayout({
 
           <BlogListWrapper />
 
-          {process.env.NODE_ENV === "production" && <Analytics />}
           <Footer />
           <FloatingContactButtons />
+          <Analytics />
         </LanguageProvider>
       </body>
     </html>
