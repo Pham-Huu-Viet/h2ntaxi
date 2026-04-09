@@ -315,7 +315,7 @@ export function QuickPriceChecker() {
           disabled={!selectedLocation}
           onClick={handleCall}
         >
-          <IoCallOutline size={24} className="mr-2" /> {text.card.bookNow[lang]}
+          <IoCallOutline size={24} className="mr-2" /> {text.card.callNow[lang]}
         </ButtonUI>
       </div>
     </CardUI>

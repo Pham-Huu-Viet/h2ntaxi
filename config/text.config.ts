@@ -36,7 +36,7 @@ export const airportText = {
     airport: { en: "Noi Bai Airport", vi: "Sân bay Nội Bài" },
     selectDistrict: { en: "Select district", vi: "Chọn quận" },
     priceFrom: { en: "Starting from", vi: "Từ" },
-    bookNow: { en: "Book Now", vi: "Đặt xe ngay" },
+    callNow: { en: "Call Now", vi: "Gọi ngay" },
     seats5: { en: "5-seater car", vi: "Xe 5 chỗ" },
     seats7: { en: "7-seater car", vi: "Xe 7 chỗ" },
     carType: { en: "Car Type", vi: "Loại xe" },

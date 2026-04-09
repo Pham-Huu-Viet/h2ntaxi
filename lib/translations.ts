@@ -13,7 +13,7 @@ export const translations = {
     fromAirport: "From Airport",
     toDestination: "To Destination",
     getPrice: "Get Price",
-    bookNow: "Book Now",
+    callNow: "Call Now",
     callUs: "Call Us",
 
     // Pricing
@@ -84,7 +84,7 @@ export const translations = {
     fromAirport: "Từ Sân Bay",
     toDestination: "Đến Đích",
     getPrice: "Xem Giá",
-    bookNow: "Đặt Xe Ngay",
+    callNow: "Gọi Ngay",
     callUs: "Gọi Chúng Tôi",
 
     // Pricing
