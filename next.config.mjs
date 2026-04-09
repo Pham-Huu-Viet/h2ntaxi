@@ -13,9 +13,9 @@ const nextConfig = {
         headers: [
           {
             key: "Content-Security-Policy",
-            // Cấu hình này cho phép: Google Analytics, Vercel, Inline Scripts và Google Fonts
+            // Đã lược bỏ Google, chỉ giữ lại script cần thiết cho Vercel và Font
             value:
-              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googletagmanager.com va.vercel-scripts.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com data:; img-src 'self' data: *.googletagmanager.com *.google-analytics.com; connect-src 'self' *.google-analytics.com *.analytics.google.com *.googletagmanager.com va.vercel-scripts.com;",
+              "default-src 'self'; script-src 'self' 'unsafe-eval' va.vercel-scripts.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' va.vercel-scripts.com;",
           },
           {
             key: "X-Frame-Options",
@@ -27,7 +27,8 @@ const nextConfig = {
           },
           {
             key: "Referrer-Policy",
-            value: "origin-when-cross-origin",
+            // Đổi sang cái này để lấy trọn điểm từ Mozilla
+            value: "strict-origin-when-cross-origin",
           },
           {
             key: "Permissions-Policy",
@@ -36,7 +37,7 @@ const nextConfig = {
           },
           {
             key: "Strict-Transport-Security",
-            value: "max-age=31536000; includeSubDomains; preload",
+            value: "max-age=63072000; includeSubDomains; preload",
           },
         ],
       },
