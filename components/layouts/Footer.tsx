@@ -19,7 +19,7 @@ export function Footer() {
               H2N
             </div>
             <h3 className="mb-2 text-xl font-bold text-white">
-              H2N Taxi Services
+              {t("name", language)}
             </h3>
             <p className="text-sm leading-relaxed text-gray-400">
               {t("footerDesc", language)}

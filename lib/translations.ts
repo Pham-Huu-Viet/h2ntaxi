@@ -54,6 +54,7 @@ export const translations = {
     confirmDelete: "Are you sure you want to delete this?",
 
     // Footer
+    name: "H2N Taxi Services",
     footerDesc:
       "Premium taxi services across Vietnam. Professional, reliable, and affordable transportation solutions.",
     quickLinks: "Quick Links",
@@ -125,6 +126,7 @@ export const translations = {
     confirmDelete: "Bạn có chắc chắn muốn xóa cái này không?",
 
     // Footer
+    name: "Dịch vụ Taxi H2N",
     footerDesc:
       "Dịch vụ taxi cao cấp trên toàn quốc. Giải pháp vận chuyển chuyên nghiệp, tin cậy và giá cả hợp lý.",
     quickLinks: "Liên kết nhanh",

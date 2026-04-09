@@ -5,7 +5,7 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import Cookies from "js-cookie";
 
-type Language = "en" | "vi";
+type Language = "vi" | "en";
 
 interface LanguageContextType {
   language: Language;
@@ -19,14 +19,22 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguage] = useState<Language>("vi");
 
+  // useEffect(() => {
+  //   // Only run the logic to read cookies/browsers after mounting the client.
+  //   const savedLang = Cookies.get("language") as Language;
+  //   if (savedLang) {
+  //     setLanguage(savedLang);
+  //   } else {
+  //     const browserLang = navigator.language.startsWith("vi") ? "vi" : "en";
+  //     setLanguage(browserLang);
+  //   }
+  // }, []);
+
   useEffect(() => {
-    // Only run the logic to read cookies/browsers after mounting the client.
     const savedLang = Cookies.get("language") as Language;
+
     if (savedLang) {
       setLanguage(savedLang);
-    } else {
-      const browserLang = navigator.language.startsWith("vi") ? "vi" : "en";
-      setLanguage(browserLang);
     }
   }, []);
 
